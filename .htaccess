@@ -1,0 +1,81 @@
+# Do not remove this line, otherwise mod_rewrite rules will stop working
+
+RewriteEngine On
+Options +FollowSymLinks
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+
+
+ErrorDocument 403 /error.php
+ErrorDocument 404 /error.php
+ErrorDocument 500 /error.php 
+Options -Indexes
+IndexIgnore *
+
+
+# 480 weeks
+Header set Cache-Control "max-age=290304000, public"
+
+### HEADER CACHING
+# http://www.zapphtml.tk/.htaccess/speed-up-sites-with-htaccess-caching.html
+<FilesMatch "\.(flv|gif|jpg|jpeg|png|ico)$">
+Header set Cache-Control "max-age=2592000"
+</FilesMatch>
+<FilesMatch "\.(js|css|pdf|swf)$">
+Header set Cache-Control "max-age=604800"
+</FilesMatch>
+<FilesMatch "\.(html|htm|txt)$">
+Header set Cache-Control "max-age=600"
+</FilesMatch>
+<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+Header unset Cache-Control
+</FilesMatch>
+ 
+# Optionally add a line containing the server version and virtual host
+# name to server-generated pages (internal error documents, FTP directory
+# listings, mod_status and mod_info output etc., but not CGI generated
+# documents or custom error documents).
+# Set to "EMail" to also include a mailto: link to the ServerAdmin.
+# Set to one of:  On | Off | EMail
+ServerSignature Off
+
+<Files ~ "^\.htaccess">
+  Order allow,deny
+  Deny from all
+</Files>
+
+<files web.config>
+order allow,deny
+deny from all
+</files>
+
+ServerSignature Off
+
+# Don't allow any pages to be framed - Defends against CSRF
+Header set X-Frame-Options DENY
+# Turn on IE8-IE9 XSS prevention tools
+Header set X-XSS-Protection "1; mode=block"
+# Only allow JavaScript from the same domain to be run.
+
+# Don't allow inline JavaScript to run.
+Header set X-Content-Security-Policy "allow 'self';"
+
+# prevent mime based attacks
+Header set X-Content-Type-Options "nosniff"
+
+# Make PHP code look like other code types
+AddType application/x-httpd-php .asp .py .pl
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} .*iPhone.*
+RewriteRule ^index\.html$ http://www.mobile.zapphtml.tk [L]
+RewriteRule  ^/$ http://www.zapphtml.tk/index.php [L]
+</IfModule>
+
+RewriteCond %{HTTP_USER_AGENT} ^.*iPad.*$
+RewriteRule ^(.*)$ http://ipad.zapphtml.tk [R=301]
+

@@ -1,0 +1,196 @@
+
+
+
+a {cursor: pointer;}
+.heading{ letter-spacing: 2px; }
+.wrapper{ width:960px;  height: auto;  margin:0 auto;}
+.form_holder{ position: relative; left: 900px;}
+.register input[type='text']{
+	     width:200%; 
+
+}
+
+.hero {padding:2%;}
+.jumbotron{height: 17em !important;}
+.register input[type='password']{
+	     width:200%; 
+}
+.register input{
+	margin-top: 3%;
+}
+
+#products{ }
+
+footer{ border-top:thin solid #eee;}
+footer p { margin-left: 2%; margin-top:1%; letter-spacing: 2px; }
+footer nav a{ margin-left: 2%; font-weight: bold;}
+
+@import "bootstrap";
+
+/* universal */
+
+html {
+   overflow-y: scroll;
+}
+
+body {
+   overflow: hidden;
+}
+
+
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+     line-height: 1;
+}
+
+h1 {
+      font-size: 3em;
+      letter-spacing: -2px;
+      margin-bottom: 30px;
+      text-align: center;
+}
+
+h2 {
+     font-size: 1.7em;
+     letter-spacing: -1px;
+     margin-bottom: 30px;
+     text-align: center;
+     font-weight: normal;
+     color: #999;
+}
+
+p {
+     font-size: 1.1em;
+     line-height: 1.7em;
+}
+/* header */
+#logo {
+    float: left;
+    font-family: 'Lobster', cursive; font-size: 150% !important;
+    margin-right: 10px;
+    font-size: 1.7em;
+    color: #181818;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding-top: 9px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+#logo:hover {
+    color: blue;
+    text-decoration: none;
+}
+/* footer */
+footer {
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid #eaeaea;
+    color: #999;
+}
+
+footer a {
+    color:#555;
+}
+
+footer a:hover {
+   color: #222;
+}
+footer small {
+  float: left;
+}
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}
+.signup_box{
+   margin-top:7%;
+   float:left;  
+
+}
+
+.signup_box p , a {
+   line-height:6px;
+
+}
+
+
+.header{
+   background:#181818; 
+   padding:0.1%;
+   letter-spacing:1px;
+   border-radius:3px;
+   -moz-border-radius:3px;
+   -webkit-border-radius:3px;
+
+}
+.header h3{
+    margin-left:2%;
+}
+/* forms */
+input, textarea, select, .uneditable-input {
+border: 1px solid #bbb;
+width: 100%;
+padding: 10px;
+height: auto;
+margin-bottom: 15px;
+
+}
+.username{ width: 97%; padding:2%; margin-left:3%;  background: #eee;}
+.username p { font-weight: bold; position: relative; top:-10px; }
+.name { float:left; width: 50%; height: 1em; }
+#time { 
+        margin-left:28%;
+        float:left;
+        width: 20%;
+        font-weight: bold;  
+        position: relative;
+        top:-8px;
+        height: 5em;
+      
+       }
+.name , #time { }   
+
+.sidebar_header{ padding:2%; border-bottom:thin solid #eee;  }
+#time{ position: relative; top:-27px; left:68px;}
+
+form.todo input[type='text'] , form.todo textarea ,form.todo input[type="date"],form.todo input[type="submit"]{
+   margin-top: 3%;
+}
+ form.todo input[type='text']{ border-radius:5px; -moz-border-radius:5px;-webkit-border-radius:5px; padding:3%; height: auto;}
+ form.todo textarea{border-radius:5px; -moz-border-radius:5px;-webkit-border-radius:5px; padding:3%; height:10em; }
+ form.todo input[type="date"]{ width:45%;}
+ form.todo input[type="submit"]{ width:25%; float: left;}
+ .date_section{margin-top: 5%;  width: 52%;}
+ form.todo .d_label , form.todo .date{ display: block; }
+ form.todo .date{ position:relative; top:-30px; margin-top: 12%; width:100%; }
+ .check {width:10%;}
+ form.todo .d_label{ margin-top:2%; }
+ .email_section{ width:30% !important;  margin-top:5%; }
+ form.todo .date_section , form.todo .email_section { display: inline;}
+
+
+input[type='text']{ width:70%; border-radius:5px; -moz-border-radius:5px;-webkit-border-radius:5px; padding:1%; height: auto;}
+input[type='password']{ width:70%; border-radius:5px; -moz-border-radius:5px;-webkit-border-radius:5px; padding:1%; height: auto;}
+input[type='text'],input[type='password']{ margin-top:2%;}
+input[type="submit"]{ width:20%; float: left; margin-top:2%;}
+.headin{margin-left:-38%;}
+.sidebar_header h4 {font-size: 100%; letter-spacing: 2px;}
+
+.info_holder{ border-top: thin solid #eee; 
+ border-bottom:thin solid #eee; padding:1%;
+ margin-bottom:2%;
+ background: #ddd;
+ border-radius:5px; , -moz-border-radius: 5px; 
+ -webkit-border-radius:5px;
+ box-shadow: 0px 1px 2px #333;
+ margin-left: 2%;
+  }
+  .list_name{ font-weight: bold; letter-spacing: 1px; font-size: 120%; color:#181818;}
+  .due_date{font-weight: bold; letter-spacing: 2px; }
+  .list_name , .due_date {margin-top:0.5%; }
