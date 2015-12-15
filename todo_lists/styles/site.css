@@ -1,7 +1,10 @@
 
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Arimo);
+@import url(https://fonts.googleapis.com/css?family=Nunito);
 
 
-a {cursor: pointer;}
+a {cursor: pointer; font-family: 'Nunito', sans-serif;}
 .heading{ letter-spacing: 2px; }
 .wrapper{ width:960px;  height: auto;  margin:0 auto;}
 .form_holder{ position: relative; left: 900px;}
@@ -41,6 +44,8 @@ body {
 /* typography */
 h1, h2, h3, h4, h5, h6 {
      line-height: 1;
+     font-family: 'Arimo', sans-serif;
+
 }
 
 h1 {
@@ -62,6 +67,7 @@ h2 {
 p {
      font-size: 1.1em;
      line-height: 1.7em;
+     font-family: 'Montserrat', sans-serif;
 }
 /* header */
 #logo {
@@ -194,3 +200,10 @@ input[type="submit"]{ width:20%; float: left; margin-top:2%;}
   .list_name{ font-weight: bold; letter-spacing: 1px; font-size: 120%; color:#181818;}
   .due_date{font-weight: bold; letter-spacing: 2px; }
   .list_name , .due_date {margin-top:0.5%; }
+  .back{margin-top: 3%; margin-left: 4%;}
+  .sidebar{margin-top:10%;  height: auto; padding: 1%;
+    border-radius: 5px;-moz-border-radius: 5px; -webkit-border-radius: 5px;
+    -ms-border-radius: 5px; -o-border-radius: 5px; 
+   }
+   .title input{ width:100%;}
+   .sidebar h3{ letter-spacing: 2px;}

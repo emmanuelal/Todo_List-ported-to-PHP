@@ -27,7 +27,4 @@ CREATE TABLE `TodoLists` (
 
 // get items from todo_list_id
 
-select users.email , TodoLists.t_id, TodoLists.TodoList_name , TodoLists.due_date,
-       TodoLists.description , TodoLists.todo_list_id , todolist_items.i_id ,
-       
-       
+se 

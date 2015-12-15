@@ -418,4 +418,23 @@ function user_active(){
 <?php
 
     }
+function connection_error($message){    
+?>
+<div class='container'>
+<div class='row'>
+ <div class='wrapper'>
+           <div style='margin-left:30%;'>
+          <img src ='http://localhost/ajax_loader/images/broken-chain.jpg'>
+          <br/><br/> <?php echo "<h3>".$message."</h3>";?>
+
+           </div>
+          </div>
+          </div>
+          </div>
+        
+        
+<?php
+
+  return $message;
+    }
 ?>

@@ -116,9 +116,15 @@ if(!$set_id){
     </tbody>
     </table>            
     <div class="">
-    	  <button class="btn btn-primary" onclick="location.href='new_item/'";>New Item</button>
-    	  <button class="btn btn-primary" onclick="javascript:history.back();">Back</button>
-    </div>             
+      <?php 
+          
+         echo"<a class='btn btn-primary' href='new_item.php?user=".urlencode($user)."&list_id=".urlencode($t_id)."&description=".urlencode($description)."&list_date=".urlencode($due_date)."'>New Item</a>";
+          echo"<button class='btn btn-primary' onclick='javascript:history.back();'>Back</button>";
+              
+
+      ?>
+       </div>
+    	  
 
              <?php                 
 
